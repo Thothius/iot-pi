@@ -7,6 +7,8 @@ import RPi.GPIO as IO		# References the GPIO library and sets it as IO
 import time					# Import 'time' library. Allows the script to use 'sleep'
 number = 3					# How many times the LED blinks
 speed = 1					# How fast the LED blinks
+IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
+IO.setup(4, IO.OUT)			# Sets up pin 4 as output
 
 def Blink(number,speed):	# Defines the Blink function
 	for i in range(0,number):		#Runs loop 3 times
@@ -19,8 +21,6 @@ def Blink(number,speed):	# Defines the Blink function
 		print"Done blinking"		#Prints "Done" when complete
 		IO.cleanup()
 
-IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
-IO.setup(4, IO.OUT)			# Sets up pin 4 as output
 
 while(True):		# Keeps on looping until we quit the loop
 	key = raw_input("q=ON | w=OFF | e=QUIT | a=Blink 3x | ENTER to execute command: ") # Information for the user / console input
