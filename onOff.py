@@ -11,15 +11,15 @@ IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 IO.setup(4, IO.OUT)			# Sets up pin 4 as output
 
 def Blink(number,speed):	# Defines the Blink function
+	IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 	for i in range(0,number):		#Runs loop 3 times
+		print "Loop number: " + str(i+1)		# Prints current loop
 		IO.output(4,True)
 		time.sleep(1)
 		IO.output(4,True)
 		time.sleep(1)
-		IO.output(4,True)
-		time.sleep(1)
-		print"Done blinking"		#Prints "Done" when complete
-		IO.cleanup()
+	print"Done blinking"		#Prints "Done" when complete
+	IO.cleanup()
 
 
 while(True):		# Keeps on looping until we quit the loop
