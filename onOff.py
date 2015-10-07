@@ -22,3 +22,5 @@ while(True):		# Keeps on looping until we quit the loop
 		break			# Even if 'e' is not pressed, quits the program anyway
 
 IO.cleanup		# Used so that no warnings will be generated the next time the program is run
+
+#Added extra line to the end, so no warnings would be present when viewing the file in GitHub
