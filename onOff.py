@@ -8,6 +8,17 @@ import time					# Import 'time' library. Allows the script to use 'sleep'
 number = 3					# How many times the LED blinks
 speed = 1					# How fast the LED blinks
 
+def Blink(number,speed):	# Defines the Blink function
+	for i in range(0,number):		#Runs loop 3 times
+		IO.output(4,True)
+		time.sleep(1)
+		IO.output(4,True)
+		time.sleep(1)
+		IO.output(4,True)
+		time.sleep(1)
+		print"Done blinking"		#Prints "Done" when complete
+		IO.cleanup()
+
 IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 IO.setup(4, IO.OUT)			# Sets up pin 4 as output
 
@@ -22,7 +33,7 @@ while(True):		# Keeps on looping until we quit the loop
 		
 	elif key =="a":		# If 'a' is pressed, blinks LED@pin4 three times 
 	
-		Blink3(int(number),float(speed))	
+		Blink(int(number),float(speed))	
 
 	elif key == "e":		# If 'e' is pressed, quits the loop and program
 		break
@@ -31,16 +42,4 @@ while(True):		# Keeps on looping until we quit the loop
 
 IO.cleanup		# Used so that no warnings will be generated the next time the program is run
 
-
-
-def Blink3(number,speed):
-	for i in range(0,number):		#Runs loop 3 times
-		IO.output(4,True)
-		time.sleep(1)
-		IO.output(4,True)
-		time.sleep(1)
-		IO.output(4,True)
-		time.sleep(1)
-		print"Done blinking"		#Prints "Done" when complete
-		IO.cleanup()
 
