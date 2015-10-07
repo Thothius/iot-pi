@@ -29,6 +29,7 @@ while(True):		# Keeps on looping until we quit the loop
 
 IO.cleanup		# Used so that no warnings will be generated the next time the program is run
 
+<<<<<<< HEAD
 
 
 def Blink3(3,1):
@@ -42,3 +43,6 @@ IO.output(4,True)
 		print"Done blinking"		#Prints "Done" when complete
 		IO.cleanup()
 
+=======
+#Added extra line to the end, so no warnings would be present when viewing the file in GitHub
+>>>>>>> origin/master
