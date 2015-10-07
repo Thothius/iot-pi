@@ -32,16 +32,13 @@ IO.cleanup		# Used so that no warnings will be generated the next time the progr
 
 
 def Blink3(3,1):
-for i in range(0,3):		#Runs loop 3 times
-IO.output(4,True)
-		time.sleep(1)
+	for i in range(0,3):		#Runs loop 3 times
 		IO.output(4,True)
-		time.sleep(1)
-		IO.output(4,True)
-		time.sleep(1)
-		print"Done blinking"		#Prints "Done" when complete
-		IO.cleanup()
+			time.sleep(1)
+			IO.output(4,True)
+			time.sleep(1)
+			IO.output(4,True)
+			time.sleep(1)
+			print"Done blinking"		#Prints "Done" when complete
+			IO.cleanup()
 
-=======
-#Added extra line to the end, so no warnings would be present when viewing the file in GitHub
->>>>>>> origin/master
