@@ -29,7 +29,6 @@ while(True):		# Keeps on looping until we quit the loop
 
 IO.cleanup		# Used so that no warnings will be generated the next time the program is run
 
-<<<<<<< HEAD
 
 
 def Blink3(3,1):
