@@ -15,16 +15,3 @@ A collection of IoT scripts and programs that can be used with the Raspberry Pi.
 <h2>onOFFweb.py</h2>
 <p>Uses the code from onOff.py, but is reworked to be used with Lighttpd web server and the Flup library.
 The index.html uses prototype.js library to handle AJAX requests. And has three buttons that correspond to the same commands as used in onOFF.py script.To tell the web server where to find the onOFFweb python script, you need to edit /etc/lighttpd/lighttpd.conf. Add "mod_fastcgi" to the server.modules list and the following block in the very end.</p>
-<code>
-<pre>
- fastcgi.server = (
-   ".py" => (
-     "python-fcgi" => (
-       "socket" => "/tmp/fastcgi.python.socket",
-       "bin-path" => "/var/www/doStuff.py",
-       "check-local" => "disable",
-       "max-procs" => 1)
-    )
- )
- </pre>
-<code/>
