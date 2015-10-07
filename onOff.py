@@ -36,11 +36,11 @@ IO.cleanup		# Used so that no warnings will be generated the next time the progr
 def Blink3(number,speed):
 	for i in range(0,number):		#Runs loop 3 times
 		IO.output(4,True)
-			time.sleep(1)
-			IO.output(4,True)
-			time.sleep(1)
-			IO.output(4,True)
-			time.sleep(1)
-			print"Done blinking"		#Prints "Done" when complete
-			IO.cleanup()
+		time.sleep(1)
+		IO.output(4,True)
+		time.sleep(1)
+		IO.output(4,True)
+		time.sleep(1)
+		print"Done blinking"		#Prints "Done" when complete
+		IO.cleanup()
 
