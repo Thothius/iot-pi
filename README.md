@@ -15,3 +15,20 @@ A simple script that lets the user turn his LED on and off by using console comm
 6. Loops until the user quits the loop<br>
 7. Cleans everything up so that no warnings will be displayed when the script is run again
 
+
+<h2>onOFFweb.py</h2>
+Uses the code from onOff.py, but is reworked to be used with Lighttpd web server and the Flup library.
+
+To tell the web server where to find the onOFFweb python script, you need to edit /etc/lighttpd/lighttpd.conf. Add "mod_fastcgi" to the server.modules list and the following block @ the end of the file whole.
+<code>
+ fastcgi.server = (
+   ".py" => (
+     "python-fcgi" => (
+       "socket" => "/tmp/fastcgi.python.socket",
+       "bin-path" => "/var/www/doStuff.py",
+       "check-local" => "disable",
+       "max-procs" => 1)
+    )
+ )
+<code/>
+
