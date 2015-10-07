@@ -11,7 +11,7 @@ A simple script that lets the user turn his LED on and off by using console comm
 2. Uses the BCM numbering scheme<br>
 3. Sets a pin as output<br>
 4. Creates a loop<br>
-5. Displays user input commands that can be used<br>
+5. Displays user input commands that can be used to turn the LED on and off<br>
 6. Loops until the user quits the loop<br>
 7. Cleans everything up so that no warnings will be displayed when the script is run again
 
