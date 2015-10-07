@@ -16,7 +16,7 @@ def Blink(number,speed):	# Defines the Blink function
 		print "Loop number: " + str(i+1)		# Prints current loop
 		IO.output(4,True)
 		time.sleep(1)
-		IO.output(4,True)
+		IO.output(4,False)
 		time.sleep(1)
 	print"Done blinking"		#Prints "Done" when complete
 	IO.cleanup()
