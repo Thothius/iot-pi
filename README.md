@@ -13,5 +13,18 @@ A collection of IoT scripts and programs that can be used with the Raspberry Pi.
 6. Loops until the user quits the loop<br>
 7. Cleans everything up so that no warnings will be displayed when the script is run again<br>
 <h2>onOFFweb.py</h2>
-<p>Uses the code from onOff.py, but is reworked to be used with Lighttpd web server and the Flup library.
-The index.html uses prototype.js library to handle AJAX requests. And has three buttons that correspond to the same commands as used in onOFF.py script.To tell the web server where to find the onOFFweb python script, you need to edit /etc/lighttpd/lighttpd.conf. Add "mod_fastcgi" to the server.modules list and the following block in the very end.</p>
+Uses the code from onOff.py, but is reworked to be used with Lighttpd web server and the Flup library.
+The index.html uses prototype.js library to handle AJAX requests. And has three buttons that correspond to the same commands as used in onOFF.py script.
+<br>
+To tell the web server where to find the onOFFweb python script, you need to edit <code>/etc/lighttpd/lighttpd.conf</code> Add <code>"mod_fastcgi"</code> to the server.modules list and the following block in the very end. Restart the web server after this.
+<pre>  
+fastcgi.server = (
+  ".py" => (      
+  "python-fcgi" => (       
+    "socket" => "/tmp/fastcgi.python.socket",       
+    "bin-path" => "/var/www/doStuff.py",      
+    "check-local" => "disable",      
+    "max-procs" => 1)  
+  ) 
+)  
+</pre>
