@@ -21,18 +21,20 @@ def Blink(number,speed):	# Defines the Blink function
 	print"Done blinking"		#Prints "Done" when complete
 	IO.cleanup()
 
-IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
+
 while(True):		# Keeps on looping until we quit the loop
 	key = raw_input("q=ON | w=OFF | e=QUIT | a=Blink 3x | ENTER to execute command: ") # Information for the user / console input
 
 	if key =="q":		# If 'q' is pressed, turns ON the LED@pin4
+		IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 		IO.output(4,True)
 
 	elif key == "w": 	# If 'w' is pressed, turns OFF the LED@pin4
+		IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 		IO.output(4,False)
 		
 	elif key =="a":		# If 'a' is pressed, blinks LED@pin4 three times 
-	
+		IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 		Blink(int(number),float(speed))	
 
 	elif key == "e":		# If 'e' is pressed, quits the loop and program
