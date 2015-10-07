@@ -21,7 +21,7 @@ def Blink(number,speed):	# Defines the Blink function
 	print"Done blinking"		#Prints "Done" when complete
 	IO.cleanup()
 
-
+IO.setmode(IO.BCM)			# Uses the BCM numbering scheme for this bus
 while(True):		# Keeps on looping until we quit the loop
 	key = raw_input("q=ON | w=OFF | e=QUIT | a=Blink 3x | ENTER to execute command: ") # Information for the user / console input
 
