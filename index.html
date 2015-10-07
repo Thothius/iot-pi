@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>LED TEST.</title>
+  	<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> 
+  </head>
+  <body>
+    <h1>Oh hello there Lauri, check out this sweet app --></h1>
+    <form>
+    	<input type="button" value="On" onclick="go('q')" style="font-size:200%;"><br /><br />
+    	<input type="button" value="Off" onclick="go('w')" style="font-size:200%;"><br /><br />
+		<input type="button" value="Blink until the world ends" onclick="go('a')" style="font-size:200%;">
+    </form>
+    <script type="text/javascript">
+      function go(qry) {
+	    new Ajax.Request('onOFFweb.py?q=' + qry, 
+	    	{method: 'GET'}
+        );
+      }
+    </script>
+  </body>
+</html>
