@@ -21,14 +21,15 @@ Uses the code from onOff.py, but is reworked to be used with Lighttpd web server
 
 To tell the web server where to find the onOFFweb python script, you need to edit /etc/lighttpd/lighttpd.conf. Add "mod_fastcgi" to the server.modules list and the following block @ the end of the file whole.
 <code>
- fastcgi.server = (
-   ".py" => (
-     "python-fcgi" => (
-       "socket" => "/tmp/fastcgi.python.socket",
-       "bin-path" => "/var/www/doStuff.py",
-       "check-local" => "disable",
-       "max-procs" => 1)
-    )
- )
+<br>
+ fastcgi.server = (<br>
+   ".py" => (<br>
+     "python-fcgi" => (<br>
+       "socket" => "/tmp/fastcgi.python.socket",<br>
+       "bin-path" => "/var/www/doStuff.py",<br>
+       "check-local" => "disable",<br>
+       "max-procs" => 1)<br>
+    )<br>
+ )<br>
 <code/>
 
