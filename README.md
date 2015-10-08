@@ -3,7 +3,7 @@
 A collection of IoT scripts and programs that can be used with the Raspberry Pi. See below for documentation and instructions on how and what to use them for. Cheers!
 
 <h2>onOFF.py</h2>
-<p>A simple script that lets the user turn his LED on and off by using console commands. Can be reconfigured easily to suit the users setup. By default, it is configured to pin 4. (<a href="http://www.elektronik-kompendium.de/sites/raspberry-pi/fotos/raspberry-pi-15.jpg">Raspberry Pi GPIO pin layout</a>)</p>
+<p>A simple script that lets the user turn his LED on and off by using console commands. Can be reconfigured easily to suit the users setup. By default, it is configured to <b>pin 4</b>. (<a href="http://www.elektronik-kompendium.de/sites/raspberry-pi/fotos/raspberry-pi-15.jpg">Raspberry Pi GPIO pin layout</a>)</p>
 <b>Quick Summary:</b><br>
 1. Imports GPIO library<br>
 2. Uses the BCM numbering scheme<br>
