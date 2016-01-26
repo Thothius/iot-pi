@@ -1,6 +1,19 @@
 # iot-pi
 
-A small collection of IoT scripts that can be used with the Raspberry Pi. See below for more information.
+    A small collection of IoT scripts that can be used with the Raspberry Pi. See below for more information. 
+    
+    Copyright (C) 2016  Kristjan Saaremets
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
 
 <h2>onOFF.py</h2>
 <p>A simple script that lets the user turn his LED on and off by using console commands. Can be reconfigured easily to suit the users setup. By default, it is configured to <b>pin 4</b>. (<a href="http://www.elektronik-kompendium.de/sites/raspberry-pi/fotos/raspberry-pi-15.jpg">Raspberry Pi GPIO pin layout</a>)</p>
